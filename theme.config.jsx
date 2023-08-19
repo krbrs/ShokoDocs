@@ -11,7 +11,9 @@ export default {
     sidebar: {
         toggleButton: true,
     },
-    gitTimestamp: 'Last Updated On',
+    gitTimestamp: ({ timestamp, commit }) => (
+        <span>Last updated: {timestamp.toLocaleDateString()} {commit}</span>
+    ),
     navigation: {
         prev: true,
         next: true,
